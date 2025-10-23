@@ -1,0 +1,39 @@
+{
+    "http.proxyStrictSSL": false,
+    "http.systemCertificates": true,
+    "github.copilot.enable": {
+        "*": true,
+        "plaintext": true,
+        "markdown": false,
+        "scminput": false
+    },
+    "workbench.settings.applyToAllProfiles": [
+        "chat.mcp.enabled"
+    ],
+    "chat.mcp.enabled": true,
+    "chat.mcp.serverSampling": {},
+    "workbench.iconTheme": "vs-minimal",
+    "KeilAssistant.C51.Uv4Path": "\"D:/software/Keil5/UV4/UV4.exe\"",
+    "KeilAssistant.MDK.Uv4Path": "\"D:/software/Keil5/UV4/UV4.exe\"",
+    "KeilAssistant.Project.ExcludeList": [
+        "template.uvproj",
+        "template.uvprojx"
+    ],
+    "editor.accessibilitySupport": "on",
+    "chat.mcp.assisted.nuget.enabled": true,
+    "chat.mcp.discovery.enabled": {
+        "claude-desktop": true,
+        "windsurf": true,
+        "cursor-global": true,
+        "cursor-workspace": true
+    },
+    "mcp.servers": {
+        "context7": {
+            "command": "npx",
+            "args": [
+                "-y",
+                "@upstash/context7-mcp@latest"
+            ]
+        }
+    }
+}

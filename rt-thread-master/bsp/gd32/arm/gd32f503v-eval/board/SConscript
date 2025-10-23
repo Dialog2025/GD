@@ -1,0 +1,23 @@
+Import('RTT_ROOT')
+Import('rtconfig')
+from building import *
+
+cwd = GetCurrentDir()
+CPPPATH = [cwd]
+
+# 添加GD32F50x头文件路径
+CPPPATH += [cwd + '/../packages/gd32-arm-cmsis-latest/GD32F50x/Include']
+CPPPATH += [cwd + '/../packages/gd32-arm-series-latest/GD32F50x/Include']
+
+src = Glob('*.c')
+
+if rtconfig.PLATFORM in ['gcc']:
+    src += Glob('../packages/gd32-arm-series-latest/GD32F50x/Source/*.c')
+elif rtconfig.PLATFORM in ['armcc']:
+    src += Glob('../packages/gd32-arm-series-latest/GD32F50x/Source/*.c')
+elif rtconfig.PLATFORM in ['iccarm']:
+    src += Glob('../packages/gd32-arm-series-latest/GD32F50x/Source/*.c')
+
+group = DefineGroup('Drivers', src, depend = [''], CPPPATH = CPPPATH)
+
+Return('group')

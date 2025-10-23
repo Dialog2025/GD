@@ -1,0 +1,13 @@
+{
+  "workbench.colorTheme": "Default Dark+",
+  "files.autoSave": "onFocusChange",
+  "chat.mcp.enabled": true,
+  "chat.mcp.autostart": "never",
+  "mcp.servers": {},
+  "github.copilot.enable": {
+    "*": true,
+    "yaml": true,
+    "plaintext": true,
+    "markdown": true
+  }
+}
